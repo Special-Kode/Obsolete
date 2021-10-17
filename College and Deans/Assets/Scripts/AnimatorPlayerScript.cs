@@ -7,56 +7,74 @@ public class AnimatorPlayerScript: MonoBehaviour
     // Start is called before the first frame update
     Animator animator;
     Movement movement;
+    GameObject bullet;
     public bool isMoved;
     public bool isDashed;
-    public string whichState;
     private float MouseClickedTime;
     private float touchTime;
     private float ClickDelay;
     private int Clicks;
     private float SecondsToAttack;
-    AttackBehaviour attack;
+    public AttackBehaviour HowToAttack;
     void Start()
     {
         Clicks = 0;
         ClickDelay = 0.25f;
         animator = GetComponent<Animator>();
         movement = this.GetComponent<Movement>();
-        attack = this.GetComponent<AttackBehaviour>();
-        Weapon sword = new Weapon("Lapiz", 20, "Sword");
-        attack.SetWeapon(sword);
+        bullet = GameObject.FindGameObjectWithTag("Bullet");
+        HowToAttack = ScriptableObject.CreateInstance<AttackBehaviour>();
+        HowToAttack.init(this,bullet);
+        Weapon gun = new Weapon("Lapiz", 20, "Gun");
+        HowToAttack.SetWeapon(gun);
         isMoved = false;
         SecondsToAttack = 0;
-
+        
     }
 
-    // Update is called once per frame
+    // Aquí se cambian las variables de estado dependeiendo de el estado al cual se quiere llegar partiendo de un estado específico. También se dispone a ejecutar 
+    //las distintas animaciones
     void Update()
     {
+
         if (isDashed == false)
             animator.SetBool("Dash", false);
         if(isMoved==false)
             animator.SetBool("Walking", false);
+
         if (SystemInfo.deviceType == DeviceType.Desktop)
         {
+            HowToAttack.attack(SecondsToAttack, transform.position);
+            if(HowToAttack.bulletShooted==false)
+                bullet.transform.position = this.transform.position;
             if (Input.GetMouseButtonDown(0))
             {
-                setMovement();
-                Clicks++;
-                if (Clicks == 1)
+                if (HowToAttack.ClickedEnemie == false && HowToAttack.bulletShooted == false)
                 {
-                    MouseClickedTime = Time.time;
+                    setMovement();
+                    Clicks++;
+                    if (Clicks == 1)
+                    {
+                        MouseClickedTime = Time.time;
+
+                    }
+
+
+                    else if (Clicks == 2 && (Time.time - MouseClickedTime) < ClickDelay)
+                    {
+                        animator.SetBool("Dash", true);
+                        isDashed = true;
+                        Clicks = 0;
+                        isMoved = false;
+                    }
                     
+                }
+                else
+                {
+                    HowToAttack.ClickedEnemie = false;
                 }
                     
 
-                else if (Clicks == 2 && (Time.time - MouseClickedTime) < ClickDelay)
-                {
-                    animator.SetBool("Dash", true);
-                    isDashed = true;
-                    Clicks = 0;
-                    isMoved = false;
-                }
 
 
 
@@ -90,7 +108,6 @@ public class AnimatorPlayerScript: MonoBehaviour
             {
                 animator.SetBool("Dash", true);
                 isDashed = true;
-                Clicks = 0;
                 isMoved = false;
             }
 
@@ -111,81 +128,21 @@ public class AnimatorPlayerScript: MonoBehaviour
 
 
         }
-       
 
-        if (attack.getWeapon().getType() == "Sword")
-        {
-            
-            if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("Enemie").transform.position) < 1f)
-            {
-                if (Time.time-SecondsToAttack > 2f || SecondsToAttack == 0)
-                {
-                    animator.SetBool("Attacking", true);
-                    SecondsToAttack = Time.time;
-                    isMoved = false;
-                    isDashed = false;
-                    animator.SetBool("Dash", false);
-                }
-                    
-            }
-        }
+
+
             
 
 
 
-
-
-            /*
-            if (Input.GetKey(KeyCode.W))
-            {
-
-                animator.SetBool("Walking", true);
-                animator.SetBool("Up", true);
-                animator.SetBool("Down", false);
-                isMoved = true;
-
-            }
-
-            if (Input.GetKey(KeyCode.A))
-            {
-                animator.SetBool("Walking", true);
-                animator.SetBool("Left", true);
-                animator.SetBool("Right", false);
-
-                isMoved = true;
-            }
-
-            if (Input.GetKey(KeyCode.S))
-            {
-                animator.SetBool("Walking", true);
-                animator.SetBool("Down", true);
-                animator.SetBool("Up", false);
-                isMoved = true;
-            }
-
-            if (Input.GetKey(KeyCode.D))
-            {
-
-                animator.SetBool("Walking", true);
-                animator.SetBool("Right", true);
-                animator.SetBool("Left", false);
-                isMoved = true;
-            }
-
-            if (Input.GetMouseButtonDown(0))
-            {
-                animator.SetBool("Attacking", true);
-                animator.SetBool("Walking", false);
-            }
-            */
-            WhereToLook(movement.screenPos);
+            
 
 
         if (this.gameObject.GetComponentInChildren<ExternMechanicsPlayer>().death == true)
         {
             animator.SetBool("Death", true);
-            if (animator.GetCurrentAnimatorStateInfo(0).IsTag("DeathTag"))
-                UnityEditor.EditorApplication.isPlaying = false;
+           /* if (animator.GetCurrentAnimatorStateInfo(0).IsTag("DeathTag"))
+                UnityEditor.EditorApplication.isPlaying = false;*/
 
         }
 
@@ -204,7 +161,18 @@ public class AnimatorPlayerScript: MonoBehaviour
         movement.screenPos = Camera.main.ScreenToWorldPoint(new Vector3(movement.positionToMove.x, movement.positionToMove.y, 0));
         movement.direction = movement.screenPos - transform.position;
     }
-    void WhereToLook(Vector3 screenPos)
+
+
+    public void SetAttack()
+    {
+        animator.SetBool("Attacking", true);
+        SecondsToAttack = Time.time;
+        isMoved = false;
+        isDashed = false;
+        animator.SetBool("Dash", false);
+    }
+
+    public void WhereToLook(Vector3 screenPos)
     {
 
         
