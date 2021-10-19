@@ -15,15 +15,16 @@ public class Movement : MonoBehaviour
     float speed;
     float distanceDashed;
     Vector3 InitialPos;
-    // Start is called before the first frame update
+   public Vector3 newPosition;
+    // Se procede a cambiar de posición al personaje dependiendo de si se mueve o procede a realizar un dash.
     void Start()
     {
         player = this.gameObject;
         animatorPlayer = GetComponent<Animator>();
         playerScript = player.GetComponent<AnimatorPlayerScript>();
         movement = new Vector3 (0,0,0);
-        offsetx = GameObject.FindGameObjectWithTag("Player").GetComponent<BoxCollider2D>().size.x/2;
-        offsety = GameObject.FindGameObjectWithTag("Player").GetComponent<BoxCollider2D>().size.y/2 ;
+        offsetx = GameObject.FindGameObjectWithTag("Player").GetComponent<BoxCollider>().size.x/2;
+        offsety = GameObject.FindGameObjectWithTag("Player").GetComponent<BoxCollider>().size.y/2 ;
         offsetx=this.gameObject.transform.TransformPoint(offsetx, 0, 0).x;
         offsety=this.gameObject.transform.TransformPoint(offsety, 0, 0).x;
         distanceDashed = 0;
@@ -56,12 +57,14 @@ public class Movement : MonoBehaviour
 
     private void PlayerMoved()
     {
+        
         speed = 5f;
-        Vector3 newPosition;
         screenPos.z = 0;
-        newPosition=Vector2.MoveTowards(new Vector2(transform.position.x, transform.position.y), new Vector2(screenPos.x, screenPos.y), speed * Time.deltaTime); ;
-        if (applyMovement(newPosition, offsetx, offsety))
-            player.transform.position = newPosition;
+        newPosition = Vector2.MoveTowards(new Vector2(transform.position.x, transform.position.y), new Vector2(screenPos.x, screenPos.y), speed * Time.deltaTime);
+            transform.position = newPosition;
+            
+        
+
 
         /*
         
@@ -102,7 +105,7 @@ public class Movement : MonoBehaviour
         }
 
        */
-        if(Vector3.Distance(transform.position,screenPos)<0.05f)
+        if (Vector3.Distance(transform.position,screenPos)<0.05f)
             playerScript.isMoved=false;
     }
     private void PlayerDashed()
@@ -111,11 +114,9 @@ public class Movement : MonoBehaviour
             InitialPos = transform.position;
         distanceDashed += Vector3.Distance(player.transform.position, InitialPos);
         speed = 10f;
-        Vector3 newPosition;
         screenPos.z = 0;
-        newPosition = Vector2.MoveTowards(new Vector2(transform.position.x, transform.position.y), new Vector2(screenPos.x, screenPos.y), speed * Time.deltaTime); ;
-        if (applyMovement(newPosition, offsetx, offsety))
-            player.transform.position = newPosition;
+        newPosition = Vector2.MoveTowards(new Vector2(transform.position.x, transform.position.y), new Vector2(screenPos.x, screenPos.y), speed * Time.deltaTime);
+         player.transform.position = newPosition;
         if (distanceDashed > 10)
         {
             playerScript.isDashed = false;
@@ -125,15 +126,12 @@ public class Movement : MonoBehaviour
             
     }
 
-    private bool applyMovement(Vector3 newPosition, float offsetx,float offsety)
+  /*  private bool applyMovement(Vector3 newPosition)
     {
-        if (!this.GetComponent<ExternMechanicsPlayer>().MoveOrNot(newPosition, new Vector3(0, offsety, 0)) &&
-            !this.GetComponent<ExternMechanicsPlayer>().MoveOrNot(newPosition, new Vector3(0, -offsety, 0)) &&
-            !this.GetComponent<ExternMechanicsPlayer>().MoveOrNot(newPosition, new Vector3(offsetx, 0, 0)) &&
-                !this.GetComponent<ExternMechanicsPlayer>().MoveOrNot(newPosition, new Vector3(-offsetx, 0, 0)))
+        if (this.GetComponent<ExternMechanicsPlayer>().MoveOrNot(newPosition))
             return true;
         else
             return false;
       
-    }
+    }*/
 }

@@ -8,7 +8,7 @@ public class ExternMechanicsPlayer : MonoBehaviour
     public bool death;
     public int vida;
     public bool canMove;
-    private BoxCollider2D[] colliders;
+    private Collider[] colliders;
     Vector3 direction;
     Vector3 temp;
     // Start is called before the first frame update
@@ -17,8 +17,8 @@ public class ExternMechanicsPlayer : MonoBehaviour
         canMove = true;
         damage = false;
         vida = 100;
-        colliders = new BoxCollider2D[GameObject.FindGameObjectWithTag("CollidersTag").GetComponentInChildren<Transform>().childCount];
-        colliders= GameObject.FindGameObjectWithTag("CollidersTag").GetComponentsInChildren<BoxCollider2D>();
+        colliders = new BoxCollider[GameObject.FindGameObjectWithTag("CollidersTag").GetComponentInChildren<Transform>().childCount];
+        colliders= GameObject.FindGameObjectWithTag("CollidersTag").GetComponentsInChildren<Collider>();
         direction = Vector3.zero;
         temp = Vector3.zero;
     }
@@ -26,11 +26,13 @@ public class ExternMechanicsPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-            damage = true;
 
-        calculateHealth();
-        animationDamage();
+        if (damage == true)
+        {
+            calculateHealth();
+            animationDamage();
+        }
+        
         
     }
     //se asigna la vida según la escala.x de la barra de vida,
@@ -59,14 +61,14 @@ public class ExternMechanicsPlayer : MonoBehaviour
                     (1f / GameObject.FindGameObjectWithTag("HealthBarTag").GetComponentInChildren<BarAnimationScript>().TimeDamage));
         }
     }
-    public bool MoveOrNot(Vector3 position,Vector3 offset)
+   /* public bool MoveOrNot(Vector3 position)
     {
 
-        foreach (BoxCollider2D collider in colliders){
-            if (collider.OverlapPoint(position+offset))
-               return true;
+        foreach (Collider collider in colliders){
+            if (Physics.OverlapBox(collider.transform.position,collider.transform.localScale).Length!=0)
+               return false;
         }
-        return false;
+        return true;
     }
-   
+   */
 }
