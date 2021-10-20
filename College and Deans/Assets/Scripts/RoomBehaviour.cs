@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class RoomBehaviour : MonoBehaviour
 {
-    public GameObject[] SpawnPoints;
+    public GameObject[] AdjacentRooms;
+    public Transform[] SpawnPoints;
     public Vector2 position;
 
     public enum RoomType

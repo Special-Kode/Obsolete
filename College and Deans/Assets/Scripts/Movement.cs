@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 public class Movement : MonoBehaviour
 {
-    public int idImage;
+    
     public string movementState;
-    private Animator animatorPlayer;
     public bool Up,Right,Left,Down,Attack;
+    private Animator animatorPlayer;
     private Vector3 movement;
     private GameObject player;
     private AnimatorPlayerScript playerScript;
@@ -15,7 +15,8 @@ public class Movement : MonoBehaviour
     float speed;
     float distanceDashed;
     Vector3 InitialPos;
-   public Vector3 newPosition;
+    public Vector3 newPosition;
+
     // Se procede a cambiar de posición al personaje dependiendo de si se mueve o procede a realizar un dash.
     void Start()
     {
@@ -23,8 +24,8 @@ public class Movement : MonoBehaviour
         animatorPlayer = GetComponent<Animator>();
         playerScript = player.GetComponent<AnimatorPlayerScript>();
         movement = new Vector3 (0,0,0);
-        offsetx = GameObject.FindGameObjectWithTag("Player").GetComponent<BoxCollider>().size.x/2;
-        offsety = GameObject.FindGameObjectWithTag("Player").GetComponent<BoxCollider>().size.y/2 ;
+        //offsetx = GameObject.FindGameObjectWithTag("Player").GetComponent<BoxCollider>().size.x/2;
+        //offsety = GameObject.FindGameObjectWithTag("Player").GetComponent<BoxCollider>().size.y/2 ;
         offsetx=this.gameObject.transform.TransformPoint(offsetx, 0, 0).x;
         offsety=this.gameObject.transform.TransformPoint(offsety, 0, 0).x;
         distanceDashed = 0;
