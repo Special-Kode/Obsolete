@@ -19,7 +19,7 @@ public class DungeonGeneratorManager : MonoBehaviour
     public int RandomLowerBound = 5;
     public int RandomUpperBound = 10;
 
-    public int MoveAmount = 10; //Distance between rooms
+    public Vector2 MoveAmount = new Vector2(22, 22); //Distance between rooms
 
     public GameObject Room; //Room prefab
     //public GameObject[] RoomList; //List of rooms for further use
@@ -105,7 +105,7 @@ public class DungeonGeneratorManager : MonoBehaviour
                     }
                 }
                 else
-                    room.GetComponent<RoomBehaviour>().roomType = RoomBehaviour.RoomType.Enemies;
+                    SetRandomRoom(room);
 
                 roomList.Add(room);
                 positions.Add(currentPos);
@@ -116,16 +116,16 @@ public class DungeonGeneratorManager : MonoBehaviour
             switch (rand)
             {
                 case 0:
-                    currentPos += Vector2.up * MoveAmount;
+                    currentPos += Vector2.up * MoveAmount.y;
                     break;
                 case 1:
-                    currentPos += Vector2.down * MoveAmount;
+                    currentPos += Vector2.down * MoveAmount.y;
                     break;
                 case 2:
-                    currentPos += Vector2.left * MoveAmount;
+                    currentPos += Vector2.left * MoveAmount.x;
                     break;
                 case 3:
-                    currentPos += Vector2.right * MoveAmount;
+                    currentPos += Vector2.right * MoveAmount.x;
                     break;
             }
         }
@@ -141,9 +141,25 @@ public class DungeonGeneratorManager : MonoBehaviour
                 break;
             case 1:
                 room.GetComponent<RoomBehaviour>().roomType = RoomBehaviour.RoomType.Cafe;
+                foreach (var wall in room.GetComponentsInChildren<SpriteRenderer>())
+                {
+                    wall.color = Color.green;
+                }
+                foreach (var wall in room.GetComponentsInChildren<Tilemap>())
+                {
+                    wall.color = Color.green;
+                }
                 break;
             case 2:
                 room.GetComponent<RoomBehaviour>().roomType = RoomBehaviour.RoomType.Loot;
+                foreach (var wall in room.GetComponentsInChildren<SpriteRenderer>())
+                {
+                    wall.color = Color.yellow;
+                }
+                foreach (var wall in room.GetComponentsInChildren<Tilemap>())
+                {
+                    wall.color = Color.yellow;
+                }
                 break;
         }
     }
