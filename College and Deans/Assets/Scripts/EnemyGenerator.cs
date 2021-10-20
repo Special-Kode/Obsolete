@@ -26,10 +26,12 @@ public class EnemyGenerator : MonoBehaviour
     private void Start() 
     {
         CreacionSets();
+        spawns.AddRange(FindObjectOfType<RoomBehaviour>().SpawnPoints);
         SpawnEnemies("facil", spawns);
     }
 
     //Creacion de los diferentes set de enemigos
+    //TODO: Mejorar creación de sets
     private void CreacionSets()
     {
         List<Enemy> set0 = new List<Enemy>();
