@@ -109,9 +109,12 @@ public class EnemyGenerator : MonoBehaviour
         {
             case "facil":
                 int random = Random.Range(0, numSetsFacil);
-                List<Enemy> setRandom;
-                setFacil.TryGetValue(random, out setRandom);
-                
+                List<Enemy> setRandom, setToCopy;
+                setFacil.TryGetValue(random, out setToCopy);
+
+                setRandom = new List<Enemy>();
+                setRandom.AddRange(setToCopy);
+
                 do
                 {
                     Enemy temp = setRandom[0];

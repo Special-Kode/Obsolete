@@ -29,6 +29,18 @@ public class DungeonGeneratorManager : MonoBehaviour
     [SerializeField] private List<GameObject> roomList;
     [SerializeField] private List<Vector2> positions;
 
+    private void Awake()
+    {
+        if (FindObjectsOfType(GetType()).Length > 1)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            DontDestroyOnLoad(gameObject);
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -55,6 +67,8 @@ public class DungeonGeneratorManager : MonoBehaviour
                 GenerateProcLevel(random);
                 break;
         }
+
+        RearrangeLevel();
     }
 
     void GenerateProcLevel(int num)
@@ -93,7 +107,6 @@ public class DungeonGeneratorManager : MonoBehaviour
                 else
                     room.GetComponent<RoomBehaviour>().roomType = RoomBehaviour.RoomType.Enemies;
 
-
                 roomList.Add(room);
                 positions.Add(currentPos);
 
@@ -115,6 +128,31 @@ public class DungeonGeneratorManager : MonoBehaviour
                     currentPos += Vector2.right * MoveAmount;
                     break;
             }
+        }
+    }
+
+    void SetRandomRoom(GameObject room)
+    {
+        int rand = UnityEngine.Random.Range(0, System.Enum.GetValues(typeof(RoomBehaviour.RoomType)).Length - 2);
+        switch (rand)
+        {
+            case 0:
+                room.GetComponent<RoomBehaviour>().roomType = RoomBehaviour.RoomType.Enemies;
+                break;
+            case 1:
+                room.GetComponent<RoomBehaviour>().roomType = RoomBehaviour.RoomType.Cafe;
+                break;
+            case 2:
+                room.GetComponent<RoomBehaviour>().roomType = RoomBehaviour.RoomType.Loot;
+                break;
+        }
+    }
+
+    void RearrangeLevel()
+    {
+        foreach(var room in roomList)
+        {
+            Debug.Log(room.GetComponent<RoomBehaviour>().roomType);
         }
     }
 }
