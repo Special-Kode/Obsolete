@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 using UnityEditor;
 
 public class DungeonGeneratorManager : MonoBehaviour
@@ -10,26 +11,29 @@ public class DungeonGeneratorManager : MonoBehaviour
         Fixed = 0, Random = 1
     };
 
-    public RandomRoomNumberMethod GenerationMethod;
+    public RandomRoomNumberMethod GenerationMethod; //Generates a fixed number of rooms or a random number of rooms
 
     public int FixedValue = 8;
 
+    //Bounds of the random method
     public int RandomLowerBound = 5;
     public int RandomUpperBound = 10;
 
-    public int MoveAmount = 10;
+    public int MoveAmount = 10; //Distance between rooms
 
-    public GameObject Room;
-    //public GameObject[] Rooms;
+    public GameObject Room; //Room prefab
+    //public GameObject[] RoomList; //List of rooms for further use
 
     public Vector2 currentPos = Vector2.zero;
 
-    private List<Vector2> positions;
+    [SerializeField] private List<GameObject> roomList;
+    [SerializeField] private List<Vector2> positions;
 
     // Start is called before the first frame update
     void Start()
     {
         positions = new List<Vector2>();
+        roomList = new List<GameObject>();
         GenerateLevel();
     }
 
@@ -64,19 +68,33 @@ public class DungeonGeneratorManager : MonoBehaviour
                 var room = Instantiate(Room, currentPos, Quaternion.identity);
                 if (i == 0)
                 {
+                    room.GetComponent<RoomBehaviour>().roomType = RoomBehaviour.RoomType.Spawn;
                     foreach (var wall in room.GetComponentsInChildren<SpriteRenderer>())
                     {
                         wall.color = Color.cyan;
                     }
+                    foreach (var wall in room.GetComponentsInChildren<Tilemap>())
+                    {
+                        wall.color = Color.cyan;
+                    }
                 }
-                if (i == num - 1)
+                else if (i == num - 1)
                 {
+                    room.GetComponent<RoomBehaviour>().roomType = RoomBehaviour.RoomType.Boss;
                     foreach (var wall in room.GetComponentsInChildren<SpriteRenderer>())
                     {
                         wall.color = Color.red;
                     }
+                    foreach (var wall in room.GetComponentsInChildren<Tilemap>())
+                    {
+                        wall.color = Color.red;
+                    }
                 }
+                else
+                    room.GetComponent<RoomBehaviour>().roomType = RoomBehaviour.RoomType.Enemies;
 
+
+                roomList.Add(room);
                 positions.Add(currentPos);
 
                 i++;
