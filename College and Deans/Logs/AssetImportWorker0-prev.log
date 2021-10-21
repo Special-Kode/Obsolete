@@ -15,11 +15,11 @@ D:/Github/Special Kode/College-and-Deans/College and Deans
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-55048
+53127
 Successfully changed project path to: D:/Github/Special Kode/College-and-Deans/College and Deans
 D:/Github/Special Kode/College-and-Deans/College and Deans
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 47.36 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 48.00 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.20f1 (41c4e627c95f)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.20f1/Editor/Data/Resources/UnitySubsystems
@@ -35,39 +35,39 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.20f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.20f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.20f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56480
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56388
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.20f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.20f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.003199 seconds.
+Registered in 0.003135 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 46.54 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 47.38 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.423 seconds
+- Completed reload, in  1.404 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1423ms)
-		BeginReloadAssembly (64ms)
+	ReloadAssembly (1404ms)
+		BeginReloadAssembly (60ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (480ms)
-			LoadAssemblies (60ms)
+		EndReloadAssembly (470ms)
+			LoadAssemblies (57ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (171ms)
+			SetupTypeCache (170ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (33ms)
-			SetupLoadedEditorAssemblies (195ms)
+			RebuildScriptCaches (32ms)
+			SetupLoadedEditorAssemblies (189ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (5ms)
+				InitializePlatformSupportModulesInManaged (6ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (47ms)
-				BeforeProcessingInitializeOnLoad (19ms)
-				ProcessInitializeOnLoadAttributes (91ms)
+				BeforeProcessingInitializeOnLoad (18ms)
+				ProcessInitializeOnLoadAttributes (86ms)
 				ProcessInitializeOnLoadMethodAttributes (32ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
@@ -75,52 +75,52 @@ Domain Reload Profiling:
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.003635 seconds.
+Registered in 0.003660 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 46.64 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 45.73 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.269 seconds
+- Completed reload, in  1.238 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1270ms)
-		BeginReloadAssembly (167ms)
+	ReloadAssembly (1239ms)
+		BeginReloadAssembly (164ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (20ms)
-		EndReloadAssembly (1025ms)
-			LoadAssemblies (111ms)
+		EndReloadAssembly (999ms)
+			LoadAssemblies (108ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (325ms)
+			SetupTypeCache (322ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (52ms)
-			SetupLoadedEditorAssemblies (394ms)
+			RebuildScriptCaches (51ms)
+			SetupLoadedEditorAssemblies (378ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (5ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (47ms)
-				BeforeProcessingInitializeOnLoad (89ms)
-				ProcessInitializeOnLoadAttributes (228ms)
-				ProcessInitializeOnLoadMethodAttributes (15ms)
-				AfterProcessingInitializeOnLoad (10ms)
+				RefreshPlugins (46ms)
+				BeforeProcessingInitializeOnLoad (85ms)
+				ProcessInitializeOnLoadAttributes (218ms)
+				ProcessInitializeOnLoadMethodAttributes (14ms)
+				AfterProcessingInitializeOnLoad (9ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (9ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
-Refreshing native plugins compatible for Editor in 0.73 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
+Refreshing native plugins compatible for Editor in 0.49 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2106 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 93.5 MB.
 System memory in use after: 93.6 MB.
 
 Unloading 26 unused Assets to reduce memory usage. Loaded Objects now: 2546.
-Total: 3.780400 ms (FindLiveObjects: 0.260500 ms CreateObjectMapping: 0.065700 ms MarkObjects: 3.365800 ms  DeleteObjects: 0.086700 ms)
+Total: 3.651600 ms (FindLiveObjects: 0.255100 ms CreateObjectMapping: 0.053200 ms MarkObjects: 3.250300 ms  DeleteObjects: 0.091100 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -134,82 +134,1233 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/Rooms/Room_TL_00.prefab
-  artifactKey: Guid(3e98042d255835a4481a8964f784d3bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rooms/Room_TL_00.prefab using Guid(3e98042d255835a4481a8964f784d3bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b8492925b641606750e217857dbf4f9') in 0.122219 seconds 
-  Import took 0.126058 seconds .
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60806b1084f5553f47053a264d869606') in 0.056776 seconds 
+  Import took 0.060713 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000200 seconds.
-  path: Assets/Rooms/Room_RBL_00.prefab
-  artifactKey: Guid(de49cc2703198bb479d950c202633855) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rooms/Room_RBL_00.prefab using Guid(de49cc2703198bb479d950c202633855) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd59479af7bf255b102bfb13810542fd') in 0.027570 seconds 
-  Import took 0.031294 seconds .
+  Time since last request: 4.595172 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab3796460ad6dfe67f9dbf8645564402') in 0.073423 seconds 
+  Import took 0.077098 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000224 seconds.
-  path: Assets/Rooms/Room_TRB_00.prefab
-  artifactKey: Guid(414d70f8f95c3e544b6d906b5cd00537) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rooms/Room_TRB_00.prefab using Guid(414d70f8f95c3e544b6d906b5cd00537) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31781e2202582500decb530beae17c78') in 0.030950 seconds 
-  Import took 0.035019 seconds .
+  Time since last request: 10.963123 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2bad58982576fb71f1784d3dd51518c5') in 0.013208 seconds 
+  Import took 0.016655 seconds .
 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003614 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.56 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.130 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1131ms)
-		BeginReloadAssembly (125ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (7ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (38ms)
-		EndReloadAssembly (929ms)
-			LoadAssemblies (108ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (323ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (46ms)
-			SetupLoadedEditorAssemblies (336ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (7ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (90ms)
-				ProcessInitializeOnLoadAttributes (222ms)
-				ProcessInitializeOnLoadMethodAttributes (6ms)
-				AfterProcessingInitializeOnLoad (9ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (12ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.58 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2096 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 95.9 MB.
-System memory in use after: 96.0 MB.
+Received Import Request.
+  Time since last request: 4.822387 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58c88cf689b2c88eb16cdd50a9fb3fa7') in 0.011241 seconds 
+  Import took 0.014769 seconds .
 
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2556.
-Total: 3.492900 ms (FindLiveObjects: 0.241700 ms CreateObjectMapping: 0.052700 ms MarkObjects: 3.176900 ms  DeleteObjects: 0.020300 ms)
+========================================================================
+Received Import Request.
+  Time since last request: 6.828249 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55a5e560bd6b98ad85f9bfd944de6cce') in 0.009540 seconds 
+  Import took 0.013029 seconds .
 
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 6.019580 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9561a50d621532c87d2a90d83cf0c30d') in 0.008992 seconds 
+  Import took 0.012972 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.407603 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52126952881b19ccb0dc4c3d8ee47a5a') in 0.008245 seconds 
+  Import took 0.011970 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.489571 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84ba890316069c27963910cd924d91ee') in 0.008652 seconds 
+  Import took 0.012378 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.863031 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3c26814485535cd8e7adbf0807a7518') in 0.008699 seconds 
+  Import took 0.012279 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.986938 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '876e312d6d94e29a897abc55b5c53d45') in 0.009798 seconds 
+  Import took 0.013638 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 26.514105 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c555125e89fb640245de9605224d1ffa') in 0.008867 seconds 
+  Import took 0.012509 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.064561 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a5e233597005acca917220173deb1a1') in 0.008813 seconds 
+  Import took 0.012549 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 22.138098 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbdc80eceded9be40eb5de608caf3c65') in 0.015754 seconds 
+  Import took 0.019467 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.580653 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3034464dfb21b1b3845691c59520965d') in 0.011793 seconds 
+  Import took 0.015735 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.987362 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5203153025af6cca8447513ce6a75a43') in 0.010815 seconds 
+  Import took 0.014892 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.795074 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96bb0bd13feb6f3264cb2b05dc41a784') in 0.010852 seconds 
+  Import took 0.014977 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.814582 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd91bdf6454a7696befc1a968d9c8c18') in 0.014264 seconds 
+  Import took 0.018012 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.389304 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e070252edf6549da411610b9c5aa5a7a') in 0.013584 seconds 
+  Import took 0.017263 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.386323 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd753271c3d73d5ae474f6337d7f6e8fa') in 0.014120 seconds 
+  Import took 0.017793 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.389948 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1938e064d570aa8436d2823eb646b6e1') in 0.013536 seconds 
+  Import took 0.017226 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.196828 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8439337f633d05ed22be9b85cd963e60') in 0.015391 seconds 
+  Import took 0.018894 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.615200 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e802923cd907ad7f7e6847af32c4b76') in 0.010420 seconds 
+  Import took 0.014089 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.242771 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c72f55be7d2958e6ef2331563e91d4c1') in 0.013479 seconds 
+  Import took 0.017072 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.385317 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94f62fca887f1afb727081d1f00668c4') in 0.014461 seconds 
+  Import took 0.018332 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.387590 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30ad1260909bcb54e9a11b56b91d0500') in 0.013984 seconds 
+  Import took 0.017637 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.789541 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9cf29c30427a3f45f8f13f463ee0469') in 0.014235 seconds 
+  Import took 0.017795 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.586662 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1a4bd8a1948a659db9fcd0105ecde99') in 0.016863 seconds 
+  Import took 0.020435 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.382754 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4d8338b83c8d80098c9271d51ccc092') in 0.016533 seconds 
+  Import took 0.020138 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.593650 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3199bbf8d71db128f43918841b81e3f') in 0.015850 seconds 
+  Import took 0.019512 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.403504 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd0a5ba408113b1f879bc06d85bccfe0') in 0.009428 seconds 
+  Import took 0.013304 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.000328 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9be9ef2708e1389302641ec5d45ea0fb') in 0.011319 seconds 
+  Import took 0.015010 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.225949 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d699adaec69e1d5bd3e4f85d21b7cab') in 0.010675 seconds 
+  Import took 0.014544 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.862076 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8e876b9dc7c83ab00f78461343f7e73') in 0.010383 seconds 
+  Import took 0.013949 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.991647 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c18469d40c3a3f0f823433baae7b47f1') in 0.008992 seconds 
+  Import took 0.012620 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.435015 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2428227d97a03f3567d568544f01897c') in 0.015896 seconds 
+  Import took 0.020632 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.497046 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60b4b6fe1f57caf14f1ac4a67cae7683') in 0.016074 seconds 
+  Import took 0.019774 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.232872 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fee2c43e573489e76806bff816c1fb5a') in 0.018887 seconds 
+  Import took 0.022885 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.421466 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff847a70f447a5eff7f444ca21a128e7') in 0.021858 seconds 
+  Import took 0.025748 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.464764 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09c7a81630a2f605f4dbda4d6d2a3419') in 0.021692 seconds 
+  Import took 0.025531 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.992306 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38294d796cd3952ff0eda2bcc431e194') in 0.014329 seconds 
+  Import took 0.018162 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.820155 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '559180dbb689920ec49f492c8fe388ac') in 0.014787 seconds 
+  Import took 0.018583 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.233943 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c2a9aeee40a8f8fa30ea84c707caee2') in 0.014952 seconds 
+  Import took 0.018744 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.613214 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dcf0f3e5d1d9a067f605ede06b21fb3c') in 0.015847 seconds 
+  Import took 0.019664 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.024579 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89c1c973f81fe48962e080d63c625a30') in 0.027428 seconds 
+  Import took 0.031327 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.610932 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20aabe811e39cf61bbcafcc1c2f16afe') in 0.024479 seconds 
+  Import took 0.028627 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.793021 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3003f31976a0a315a8bc9a7de5cc2396') in 0.024012 seconds 
+  Import took 0.027835 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.581882 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e312cf485cdd443d64c41ddcb795eb1b') in 0.032351 seconds 
+  Import took 0.036218 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.614141 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6dc7a6d763734f5fcc73e1812873e7f') in 0.017461 seconds 
+  Import took 0.021386 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.600328 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52b04926f0728978616f8a6ed87c523e') in 0.017264 seconds 
+  Import took 0.021161 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.643031 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38166ed0b0a083c0332d70d2439cae15') in 0.017424 seconds 
+  Import took 0.021385 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.192307 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84340dee98860f27429917b1b9d1b109') in 0.018682 seconds 
+  Import took 0.022627 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.220948 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6eb1c821ecadfb2f6159af1610b0844') in 0.017656 seconds 
+  Import took 0.021516 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.593216 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2eec1ce5c2d8ccc0b77b0c898b055263') in 0.018359 seconds 
+  Import took 0.022323 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 79.050868 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6613b7cd7237e4de57f89d3ff6a8012') in 0.029197 seconds 
+  Import took 0.033135 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 20.911161 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59b821578922402e7b5dc0cba7c7534e') in 0.019940 seconds 
+  Import took 0.023902 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.793535 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbc1a376b992e4704691b8b2a00d3195') in 0.019006 seconds 
+  Import took 0.022894 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.792741 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1478f859bbfaa76692ada57160bee8e5') in 0.020959 seconds 
+  Import took 0.024810 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.192620 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42689d9135faa11b88acae095002bcd4') in 0.018722 seconds 
+  Import took 0.022616 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.584251 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7306a95b059a7b3924f41ee01615e8b6') in 0.020224 seconds 
+  Import took 0.023991 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.588513 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '908a1816ae943252e36bad3e2c2f07a4') in 0.019802 seconds 
+  Import took 0.023660 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.581366 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f0de4df190577794b5752c70d098f76') in 0.018407 seconds 
+  Import took 0.022560 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.985788 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '239e1336dc59bd968555a28013959a76') in 0.016845 seconds 
+  Import took 0.020618 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.784453 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88e0c379e6c9445d11fd13bfa9ca5c07') in 0.017094 seconds 
+  Import took 0.020865 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.982692 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '361aaebed722afa6712cbe3d7297052a') in 0.018430 seconds 
+  Import took 0.022181 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.996887 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01901435d252749dffef867245080280') in 0.018558 seconds 
+  Import took 0.022402 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.578098 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1c3f1e226d3a546b81656943cca58a6') in 0.015694 seconds 
+  Import took 0.019387 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.799089 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b6d7043e73bc6a7c8568d93785754e3') in 0.016204 seconds 
+  Import took 0.020010 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.352766 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'efa2191aa89d9cad638cf1d05e6d2dfc') in 0.015635 seconds 
+  Import took 0.019392 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.594871 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e04d9cd91746a5041a5b65a1e9a9646b') in 0.015676 seconds 
+  Import took 0.019458 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.230575 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a2a5361f7b2778ad93dbf62afaef89b') in 0.015955 seconds 
+  Import took 0.019816 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.826391 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95243c3db948f523145b804ab9fd018c') in 0.016675 seconds 
+  Import took 0.020448 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.416160 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b42e7b1b926e72ede0d2973e756b381') in 0.016854 seconds 
+  Import took 0.020697 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.789566 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56ab93882ca990d7197e8b0cd45eca61') in 0.017130 seconds 
+  Import took 0.021037 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.823446 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45dc8cdcff3cd9d697eab9ff9bfefd90') in 0.017706 seconds 
+  Import took 0.021503 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.783670 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6aaf54c6ff533dc740b142347feca6fe') in 0.017462 seconds 
+  Import took 0.021303 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.002197 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30770abe63395a2f1b79942e8a258869') in 0.018249 seconds 
+  Import took 0.022192 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.199324 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'edeb848b76bad50850b1dd0e04be0082') in 0.017279 seconds 
+  Import took 0.021076 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.198836 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'abcc90ef98ff12295b115bb39d93061e') in 0.017462 seconds 
+  Import took 0.021325 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 18.528740 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06d458d4f89fcf9ca6507c0198e11740') in 0.019011 seconds 
+  Import took 0.022958 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.795157 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ec73df92b202adc42b1bd6177c9d30e') in 0.020978 seconds 
+  Import took 0.024910 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.435452 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cdb8abbbe561cb5ffbf9a476c0fc6741') in 0.019308 seconds 
+  Import took 0.023259 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.598187 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b09344384aaedb6a9831ac7ac84db63c') in 0.022086 seconds 
+  Import took 0.026286 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.815238 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e833e92601457744765cc49f7e9bd6b') in 0.020908 seconds 
+  Import took 0.024820 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.402167 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85810b80de57bb5af7dac4325049163c') in 0.021050 seconds 
+  Import took 0.025337 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.829935 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32494916bae48a0c6fc05720c7d22fd0') in 0.021843 seconds 
+  Import took 0.025807 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.001297 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4e79ec0386c1748f6c2adfdb8571b1f') in 0.022671 seconds 
+  Import took 0.026778 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.599172 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17c8f0fabb6024bdd633d28f606c8884') in 0.023829 seconds 
+  Import took 0.027904 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.996647 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38d238b62c7d7acdbd9663d769d4c330') in 0.025259 seconds 
+  Import took 0.029333 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.246234 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02c59daf198e829d4e1b0a2210de0162') in 0.028710 seconds 
+  Import took 0.032840 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.531393 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79042d3a591e1f607073fcb817a0ba7e') in 0.029003 seconds 
+  Import took 0.034375 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.594369 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '841c120d1a82d9eca9d7d446967f6722') in 0.025864 seconds 
+  Import took 0.030034 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.586568 seconds.
+  path: Assets/Rooms/Room_TBL_00.prefab
+  artifactKey: Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TBL_00.prefab using Guid(3b959f8f26054a54f8974b40ca15ca6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '410f32ce6f7dbe03d130fdba8d38f2dd') in 0.026447 seconds 
+  Import took 0.030518 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 211.454592 seconds.
+  path: Assets/Rooms/Room_TRL_00.prefab
+  artifactKey: Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TRL_00.prefab using Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d82d61f693f1cb59d4796b83d790b1d') in 0.011912 seconds 
+  Import took 0.015647 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 42.484990 seconds.
+  path: Assets/Rooms/Room_TRL_00.prefab
+  artifactKey: Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TRL_00.prefab using Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa361eab352426c389197c9d4b673072') in 0.013229 seconds 
+  Import took 0.016932 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.593694 seconds.
+  path: Assets/Rooms/Room_TRL_00.prefab
+  artifactKey: Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TRL_00.prefab using Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38e479db094ad444244b74d3be109e72') in 0.008045 seconds 
+  Import took 0.011461 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.624713 seconds.
+  path: Assets/Rooms/Room_TRL_00.prefab
+  artifactKey: Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TRL_00.prefab using Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9be38ad9cf647fb23fc50f191ba49da1') in 0.009244 seconds 
+  Import took 0.013563 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.951341 seconds.
+  path: Assets/Rooms/Room_TRL_00.prefab
+  artifactKey: Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TRL_00.prefab using Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85f9baa989f5857a568a0dfec29f196b') in 0.008674 seconds 
+  Import took 0.012188 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.510990 seconds.
+  path: Assets/Rooms/Room_TRL_00.prefab
+  artifactKey: Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TRL_00.prefab using Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76f8a07b72efc411f413ec38f4791194') in 0.014084 seconds 
+  Import took 0.018012 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.226190 seconds.
+  path: Assets/Rooms/Room_TRL_00.prefab
+  artifactKey: Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TRL_00.prefab using Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eebed33dabbab1b4d9f2c91e48c26586') in 0.009736 seconds 
+  Import took 0.013862 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.776213 seconds.
+  path: Assets/Rooms/Room_TRL_00.prefab
+  artifactKey: Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TRL_00.prefab using Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd87b43d9e5cd6e70435a33434b30bf19') in 0.009132 seconds 
+  Import took 0.013117 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.388760 seconds.
+  path: Assets/Rooms/Room_TRL_00.prefab
+  artifactKey: Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TRL_00.prefab using Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee3eb27e0de0914c470f13e881d3eebf') in 0.008419 seconds 
+  Import took 0.012076 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.780635 seconds.
+  path: Assets/Rooms/Room_TRL_00.prefab
+  artifactKey: Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TRL_00.prefab using Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c3e9709d17da6ced1e0ee06cb3b9d53') in 0.010318 seconds 
+  Import took 0.013780 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.780476 seconds.
+  path: Assets/Rooms/Room_TRL_00.prefab
+  artifactKey: Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TRL_00.prefab using Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a60effea8f5d8e2368da99d2eb6cfa22') in 0.008705 seconds 
+  Import took 0.012259 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.352579 seconds.
+  path: Assets/Rooms/Room_TRL_00.prefab
+  artifactKey: Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TRL_00.prefab using Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c507b014cbb4e545ef360594652946c4') in 0.016046 seconds 
+  Import took 0.019729 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.786142 seconds.
+  path: Assets/Rooms/Room_TRL_00.prefab
+  artifactKey: Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TRL_00.prefab using Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '046e28f9b38407cc2c3b5f3c5e278da1') in 0.009805 seconds 
+  Import took 0.013416 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.790289 seconds.
+  path: Assets/Rooms/Room_TRL_00.prefab
+  artifactKey: Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TRL_00.prefab using Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5dfe751524c1a8e5c71f3a7deb60ed91') in 0.011154 seconds 
+  Import took 0.014943 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.792889 seconds.
+  path: Assets/Rooms/Room_TRL_00.prefab
+  artifactKey: Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TRL_00.prefab using Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1121696de616d23d54e6b9093d9a67f') in 0.011140 seconds 
+  Import took 0.014863 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.438449 seconds.
+  path: Assets/Rooms/Room_TRL_00.prefab
+  artifactKey: Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TRL_00.prefab using Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9531633df55f6c9fa120ee92d8edf8a9') in 0.016035 seconds 
+  Import took 0.022548 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.560113 seconds.
+  path: Assets/Rooms/Room_TRL_00.prefab
+  artifactKey: Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TRL_00.prefab using Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '958de41059d422cf433218ca76f2c548') in 0.010957 seconds 
+  Import took 0.014515 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.585768 seconds.
+  path: Assets/Rooms/Room_TRL_00.prefab
+  artifactKey: Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TRL_00.prefab using Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6939e1e821ee4ccb20971c6fd9c544fa') in 0.013524 seconds 
+  Import took 0.017111 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.384204 seconds.
+  path: Assets/Rooms/Room_TRL_00.prefab
+  artifactKey: Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TRL_00.prefab using Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a665087f2331ce3d0be43f2ac1bb3c2') in 0.011143 seconds 
+  Import took 0.014708 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.589113 seconds.
+  path: Assets/Rooms/Room_TRL_00.prefab
+  artifactKey: Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TRL_00.prefab using Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '338274041846a9f4346d48ea5ebd4661') in 0.010552 seconds 
+  Import took 0.014127 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.403701 seconds.
+  path: Assets/Rooms/Room_TRL_00.prefab
+  artifactKey: Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TRL_00.prefab using Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '483b17d02d243fdf43a33e51ff739844') in 0.011500 seconds 
+  Import took 0.015067 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.790012 seconds.
+  path: Assets/Rooms/Room_TRL_00.prefab
+  artifactKey: Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TRL_00.prefab using Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f774de36502b0ee6ef0963903664bc12') in 0.012844 seconds 
+  Import took 0.016567 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.835020 seconds.
+  path: Assets/Rooms/Room_TRL_00.prefab
+  artifactKey: Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TRL_00.prefab using Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b847f0cedb279eff79d1f7699220f3e') in 0.011352 seconds 
+  Import took 0.015035 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.387712 seconds.
+  path: Assets/Rooms/Room_TRL_00.prefab
+  artifactKey: Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TRL_00.prefab using Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da205e9470d662c3153f4ab701340fed') in 0.011434 seconds 
+  Import took 0.014941 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.597085 seconds.
+  path: Assets/Rooms/Room_TRL_00.prefab
+  artifactKey: Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TRL_00.prefab using Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7bbed890a3e3740970ff2ab54eff5c21') in 0.011206 seconds 
+  Import took 0.014848 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.584942 seconds.
+  path: Assets/Rooms/Room_TRL_00.prefab
+  artifactKey: Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TRL_00.prefab using Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '442151c76aa75540de47279f26056b43') in 0.013369 seconds 
+  Import took 0.016945 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.441370 seconds.
+  path: Assets/Rooms/Room_TRL_00.prefab
+  artifactKey: Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TRL_00.prefab using Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '974a99da5bf257043a1f47edc9579261') in 0.011917 seconds 
+  Import took 0.015411 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.189049 seconds.
+  path: Assets/Rooms/Room_TRL_00.prefab
+  artifactKey: Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TRL_00.prefab using Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ea9d7033c0fd69bb6dfc593edd03ec6') in 0.010872 seconds 
+  Import took 0.014491 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.387717 seconds.
+  path: Assets/Rooms/Room_TRL_00.prefab
+  artifactKey: Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TRL_00.prefab using Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33270a686cd0ba7eeb9d14987f7e6627') in 0.010969 seconds 
+  Import took 0.014495 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.396937 seconds.
+  path: Assets/Rooms/Room_TRL_00.prefab
+  artifactKey: Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TRL_00.prefab using Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '958f42d4f762fabaccc8a53540f5b1ec') in 0.011456 seconds 
+  Import took 0.015078 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.386613 seconds.
+  path: Assets/Rooms/Room_TRL_00.prefab
+  artifactKey: Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TRL_00.prefab using Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c1a5b8c730829c6c7e468a5fa179da9') in 0.010601 seconds 
+  Import took 0.014132 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.390153 seconds.
+  path: Assets/Rooms/Room_TRL_00.prefab
+  artifactKey: Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TRL_00.prefab using Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '927b6c2a58fc59e42c45f631cc601fbb') in 0.012257 seconds 
+  Import took 0.015911 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.390206 seconds.
+  path: Assets/Rooms/Room_TRL_00.prefab
+  artifactKey: Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TRL_00.prefab using Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6884d4844ba40a6b40359d698af30c5') in 0.012127 seconds 
+  Import took 0.015719 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.399912 seconds.
+  path: Assets/Rooms/Room_TRL_00.prefab
+  artifactKey: Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TRL_00.prefab using Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49b538239a474bdc0c5c79421e5af939') in 0.010929 seconds 
+  Import took 0.014979 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.390977 seconds.
+  path: Assets/Rooms/Room_TRL_00.prefab
+  artifactKey: Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TRL_00.prefab using Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6dcb6d046714941fb81443a165586944') in 0.011821 seconds 
+  Import took 0.015440 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.586716 seconds.
+  path: Assets/Rooms/Room_TRL_00.prefab
+  artifactKey: Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TRL_00.prefab using Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '457c6cd11ed89881b408c3c551c509cc') in 0.011460 seconds 
+  Import took 0.015050 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.588480 seconds.
+  path: Assets/Rooms/Room_TRL_00.prefab
+  artifactKey: Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TRL_00.prefab using Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f556d5ac1cfad95e0413b4f8dfaab79c') in 0.012139 seconds 
+  Import took 0.015746 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.623242 seconds.
+  path: Assets/Rooms/Room_TRL_00.prefab
+  artifactKey: Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TRL_00.prefab using Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ae73d70c6e35746fead7a46d4a66a5a') in 0.013826 seconds 
+  Import took 0.017503 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 42.938556 seconds.
+  path: Assets/Rooms/Room_TRL_00.prefab
+  artifactKey: Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TRL_00.prefab using Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aac4a841fb0000ce0468ddb060836601') in 0.012783 seconds 
+  Import took 0.016426 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.821548 seconds.
+  path: Assets/Rooms/Room_TRL_00.prefab
+  artifactKey: Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TRL_00.prefab using Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b63cf602754d03ef1f20991f6d585ac5') in 0.014074 seconds 
+  Import took 0.017766 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.470318 seconds.
+  path: Assets/Rooms/Room_TRL_00.prefab
+  artifactKey: Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TRL_00.prefab using Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86a3d6d1af8e9db0abdeead026d09391') in 0.017588 seconds 
+  Import took 0.021331 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.698004 seconds.
+  path: Assets/Rooms/Room_TRL_00.prefab
+  artifactKey: Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TRL_00.prefab using Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d2dc1f7b61d01e7e880803e6a89dc29') in 0.016307 seconds 
+  Import took 0.020194 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.976547 seconds.
+  path: Assets/Rooms/Room_TRL_00.prefab
+  artifactKey: Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TRL_00.prefab using Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b0146ee1ebe517787e7229e25e14eeb') in 0.016184 seconds 
+  Import took 0.019962 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.827308 seconds.
+  path: Assets/Rooms/Room_TRL_00.prefab
+  artifactKey: Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TRL_00.prefab using Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e20fe3ed4d23eb6940416911a052383') in 0.016869 seconds 
+  Import took 0.020697 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.986456 seconds.
+  path: Assets/Rooms/Room_TRL_00.prefab
+  artifactKey: Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TRL_00.prefab using Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b21502d70d119a77eb8449ad8b14636') in 0.017201 seconds 
+  Import took 0.021010 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.015706 seconds.
+  path: Assets/Rooms/Room_TRL_00.prefab
+  artifactKey: Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TRL_00.prefab using Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2fb0bdcb374e5ea07a2f18a9be4ea142') in 0.017604 seconds 
+  Import took 0.021408 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.608587 seconds.
+  path: Assets/Rooms/Room_TRL_00.prefab
+  artifactKey: Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TRL_00.prefab using Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2fdbaf8576688febc86fe1156ff31744') in 0.016523 seconds 
+  Import took 0.020303 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.627264 seconds.
+  path: Assets/Rooms/Room_TRL_00.prefab
+  artifactKey: Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TRL_00.prefab using Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ef679b786ae2d78ba34c4f13da6b90d') in 0.017891 seconds 
+  Import took 0.021766 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.650485 seconds.
+  path: Assets/Rooms/Room_TRL_00.prefab
+  artifactKey: Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TRL_00.prefab using Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95b3b1e534e8e8a263b8d404d6d3face') in 0.020143 seconds 
+  Import took 0.023974 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.405622 seconds.
+  path: Assets/Rooms/Room_TRL_00.prefab
+  artifactKey: Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TRL_00.prefab using Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94dd32c835d6300cdae5e976131bc85b') in 0.022432 seconds 
+  Import took 0.026287 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.206938 seconds.
+  path: Assets/Rooms/Room_TRL_00.prefab
+  artifactKey: Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TRL_00.prefab using Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba6d1faf1393a477441494060ab1822a') in 0.020496 seconds 
+  Import took 0.024904 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.430995 seconds.
+  path: Assets/Rooms/Room_TRL_00.prefab
+  artifactKey: Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TRL_00.prefab using Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6875e0e5f5cc312ab69dda13988bbb75') in 0.020325 seconds 
+  Import took 0.024257 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.212792 seconds.
+  path: Assets/Rooms/Room_TRL_00.prefab
+  artifactKey: Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TRL_00.prefab using Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9544e650a3d00cef560af56f5a5808e6') in 0.022555 seconds 
+  Import took 0.026563 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.410245 seconds.
+  path: Assets/Rooms/Room_TRL_00.prefab
+  artifactKey: Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TRL_00.prefab using Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1fe895cc423aaf89cdeebfbac06c515a') in 0.021622 seconds 
+  Import took 0.025639 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.230555 seconds.
+  path: Assets/Rooms/Room_TRL_00.prefab
+  artifactKey: Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TRL_00.prefab using Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5b3e8a16ec7428608b6f95998ade073') in 0.023634 seconds 
+  Import took 0.027495 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.012736 seconds.
+  path: Assets/Rooms/Room_TRL_00.prefab
+  artifactKey: Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TRL_00.prefab using Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5867d6bac901e2608aea32f9b472765a') in 0.022850 seconds 
+  Import took 0.026850 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.783862 seconds.
+  path: Assets/Rooms/Room_TRL_00.prefab
+  artifactKey: Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TRL_00.prefab using Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbf6f60cfa065e7e8813b36d3dc8bd49') in 0.024042 seconds 
+  Import took 0.028175 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.190704 seconds.
+  path: Assets/Rooms/Room_TRL_00.prefab
+  artifactKey: Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TRL_00.prefab using Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '058a08cd5306ef08a7fae1583f3ca784') in 0.026827 seconds 
+  Import took 0.030914 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.220591 seconds.
+  path: Assets/Rooms/Room_TRL_00.prefab
+  artifactKey: Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TRL_00.prefab using Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a3a6cb9be7f272af63654f42b893ce3') in 0.028657 seconds 
+  Import took 0.032691 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.847434 seconds.
+  path: Assets/Rooms/Room_TRL_00.prefab
+  artifactKey: Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TRL_00.prefab using Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bac97f4e1bce344b0da3f3007817c9e3') in 0.025656 seconds 
+  Import took 0.029749 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.184140 seconds.
+  path: Assets/Rooms/Room_TRL_00.prefab
+  artifactKey: Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TRL_00.prefab using Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed642aee2d84b8018a7136521ebfcb27') in 0.029703 seconds 
+  Import took 0.033778 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.648905 seconds.
+  path: Assets/Rooms/Room_TRL_00.prefab
+  artifactKey: Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rooms/Room_TRL_00.prefab using Guid(65d444a50d3197148a33e61da31c1432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31ce423369de897df4d20aac514fe402') in 0.026684 seconds 
+  Import took 0.030814 seconds .
+
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
