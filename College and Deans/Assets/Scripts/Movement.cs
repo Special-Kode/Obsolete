@@ -3,20 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 public class Movement : MonoBehaviour
 {
-    
+    public int idImage;
     public string movementState;
-    public bool Up,Right,Left,Down,Attack;
     private Animator animatorPlayer;
+    public bool Up,Right,Left,Down,Attack;
     private Vector3 movement;
     private GameObject player;
     private AnimatorPlayerScript playerScript;
-    float offsetx,offsety;
     public Vector3 positionToMove,direction,screenPos;
     float speed;
     float distanceDashed;
     Vector3 InitialPos;
-    public Vector3 newPosition;
-
+   public Vector3 newPosition;
+    public Vector3 oldPosition;
+    public bool canPass;
+    private int mask;
     // Se procede a cambiar de posición al personaje dependiendo de si se mueve o procede a realizar un dash.
     void Start()
     {
@@ -24,12 +25,11 @@ public class Movement : MonoBehaviour
         animatorPlayer = GetComponent<Animator>();
         playerScript = player.GetComponent<AnimatorPlayerScript>();
         movement = new Vector3 (0,0,0);
-        //offsetx = GameObject.FindGameObjectWithTag("Player").GetComponent<BoxCollider>().size.x/2;
-        //offsety = GameObject.FindGameObjectWithTag("Player").GetComponent<BoxCollider>().size.y/2 ;
-        offsetx=this.gameObject.transform.TransformPoint(offsetx, 0, 0).x;
-        offsety=this.gameObject.transform.TransformPoint(offsety, 0, 0).x;
         distanceDashed = 0;
         InitialPos = Vector3.zero;
+        oldPosition = Vector3.zero;
+        canPass = true;
+        mask = LayerMask.GetMask("Colliders");
         //offset = this.gameObject.transform.TransformPoint(offset, 0, 0).x;
 
     }
@@ -46,23 +46,31 @@ public class Movement : MonoBehaviour
 
             if (playerScript.isMoved == true)
                 PlayerMoved();
-            else if (playerScript.isDashed == true)
+            if (playerScript.isDashed == true)
                 PlayerDashed();
         }
-           
+       
 
-        
-        
+
+
+
     }
 
 
     private void PlayerMoved()
     {
-        
         speed = 5f;
         screenPos.z = 0;
-        newPosition = Vector2.MoveTowards(new Vector2(transform.position.x, transform.position.y), new Vector2(screenPos.x, screenPos.y), speed * Time.deltaTime);
+        newPosition = transform.position;
+        newPosition = Vector2.MoveTowards(new Vector2(newPosition.x, newPosition.y), new Vector2(screenPos.x, screenPos.y), speed * Time.deltaTime);
+        Collider2D[] collider = Physics2D.OverlapBoxAll(new Vector2(newPosition.x, newPosition.y), new Vector2(2.56f/2f, 2.56f/2f), 0,mask);
+        if (collider.Length < 1 && Vector3.Distance(transform.position, screenPos) > 0.05f)
+        {
+           
             transform.position = newPosition;
+        }
+
+            
             
         
 
@@ -106,25 +114,40 @@ public class Movement : MonoBehaviour
         }
 
        */
-        if (Vector3.Distance(transform.position,screenPos)<0.05f)
-            playerScript.isMoved=false;
+
+            
     }
     private void PlayerDashed()
     {
-       if(InitialPos==Vector3.zero)
-            InitialPos = transform.position;
-        distanceDashed += Vector3.Distance(player.transform.position, InitialPos);
-        speed = 10f;
-        screenPos.z = 0;
-        newPosition = Vector2.MoveTowards(new Vector2(transform.position.x, transform.position.y), new Vector2(screenPos.x, screenPos.y), speed * Time.deltaTime);
-         player.transform.position = newPosition;
-        if (distanceDashed > 10)
+
+        Vector3  direction;
+        if (InitialPos == Vector3.zero)
         {
+            InitialPos = transform.position;
+        }
+           
+        distanceDashed = Vector3.Distance(player.transform.position, InitialPos);
+        speed = 10f;
+        direction = (playerScript.posFinalDash - playerScript.PosInitDash);
+        newPosition = Vector2.MoveTowards(new Vector2(transform.position.x, transform.position.y), 
+            new Vector2(InitialPos.x+(direction.x),InitialPos.y+ direction.y), speed * Time.deltaTime);
+
+        oldPosition = player.transform.position;
+        player.transform.position = newPosition;
+        
+        Collider2D[] collider = Physics2D.OverlapBoxAll(new Vector2(transform.position.x, transform.position.y), new Vector2(2.56f / 2f, 2.56f / 2f), 0,mask);
+
+
+        if (distanceDashed > 2 || collider.Length >= 1)
+        {
+            transform.position = oldPosition;
             playerScript.isDashed = false;
             distanceDashed = 0;
             InitialPos = Vector3.zero;
+            playerScript.enter = false;
         }
-            
+
+
     }
 
   /*  private bool applyMovement(Vector3 newPosition)
