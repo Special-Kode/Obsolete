@@ -62,10 +62,15 @@ public class DungeonGeneratorManager : MonoBehaviour
             if (!positions.Contains(currentPos))
             {
                 var room = Instantiate(Room, currentPos, Quaternion.identity);
+                foreach (var wall in room.GetComponentsInChildren<SpriteRenderer>())
+                {
+                    wall.gameObject.layer = 10;
+                }
                 if (i == 0)
                 {
                     foreach (var wall in room.GetComponentsInChildren<SpriteRenderer>())
                     {
+                      
                         wall.color = Color.cyan;
                     }
                 }

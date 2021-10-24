@@ -16,6 +16,10 @@ public class AnimatorPlayerScript: MonoBehaviour
     private int Clicks;
     private float SecondsToAttack;
     public AttackBehaviour HowToAttack;
+    Vector3 posToMove;
+    public bool enter;
+   public  Vector3 PosInitDash;
+    public Vector3  posFinalDash;
     void Start()
     {
         Clicks = 0;
@@ -36,128 +40,200 @@ public class AnimatorPlayerScript: MonoBehaviour
     //las distintas animaciones
     void Update()
     {
-
         if (isDashed == false)
             animator.SetBool("Dash", false);
-        if(isMoved==false)
+        else
+            animator.SetBool("Dash", true);
+        if (isMoved == false)
             animator.SetBool("Walking", false);
-
+        else
+            animator.SetBool("Walking", true);
         if (SystemInfo.deviceType == DeviceType.Desktop)
         {
-            HowToAttack.attack(SecondsToAttack, transform.position);
-            if(HowToAttack.bulletShooted==false)
-                bullet.transform.position = this.transform.position;
+            HowToAttack.moveBullet();
+
             if (Input.GetMouseButtonDown(0))
             {
-                if (HowToAttack.ClickedEnemie == false && HowToAttack.bulletShooted == false)
-                {
-                    setMovement();
-                    Clicks++;
-                    if (Clicks == 1)
-                    {
-                        MouseClickedTime = Time.time;
 
-                    }
-
-
-                    else if (Clicks == 2 && (Time.time - MouseClickedTime) < ClickDelay)
-                    {
-                        animator.SetBool("Dash", true);
-                        isDashed = true;
-                        Clicks = 0;
-                        isMoved = false;
-                    }
+                    PosInitDash = Input.mousePosition;
+                    PosInitDash = Camera.main.ScreenToWorldPoint(PosInitDash);
+                    PosInitDash.z = 0;
+                
                     
+                posToMove = Input.mousePosition;
+                posToMove.z = 0;
+
+                Clicks++;
+                if (Clicks % 2 != 0)
+                {
+
+                    MouseClickedTime = Time.time;
+
+
+                }
+                isEnemyClicked(posToMove);
+                if (HowToAttack.ClickedEnemy == true)
+                {
+                    isMoved = false;
+
+                }
+
+            }
+           
+
+
+
+
+
+
+
+            
+            if (Input.GetMouseButtonUp(0))
+            {
+                enter = true;
+                posFinalDash = Input.mousePosition;
+                    posFinalDash = Camera.main.ScreenToWorldPoint(posFinalDash);
+
+
+                if (Vector3.Distance(posFinalDash, PosInitDash) > 2 && isDashed == false)
+                {
+                    
+                    isDashed = true;
+                    isMoved = false;
+                    MouseClickedTime = 0;
+                    Clicks = 0;
+                    
+                }
+
+
+                
+
+
+            }
+
+            if ((Time.time - MouseClickedTime) <= ClickDelay && Clicks % 2 == 0 && Clicks!=0 && enter==true)
+            {
+                enter = false;
+
+                if (HowToAttack.ClickedEnemy)
+                {
+                    HowToAttack.attack(SecondsToAttack, transform.position,Camera.main.ScreenToWorldPoint(posToMove), 0);
+
                 }
                 else
                 {
-                    HowToAttack.ClickedEnemie = false;
+                    isMoved = false;
                 }
-                    
 
-
-
-
+                MouseClickedTime =Time.time;
+                Clicks = 0;
 
             }
-            else if (!Input.anyKey)
+            if (Clicks % 2 != 0)
             {
-                if ((Time.time - MouseClickedTime) > ClickDelay && Clicks == 1) { 
-
-                    MouseClickedTime = 0;
-                    Clicks = 0;
-                    animator.SetBool("Walking", true);
+                if ((Time.time - MouseClickedTime) > ClickDelay && !HowToAttack.ClickedEnemy && isDashed == false && enter==true)
+                {
                     isMoved = true;
-
+                    setMovement(posToMove);
+                    enter = false;
                 }
 
-
-
             }
-        }
-        else if(SystemInfo.deviceType == DeviceType.Handheld)
-        {
-            
-            if (Input.GetTouch(0).tapCount %2 !=0)
+
+            if((Time.time - MouseClickedTime) > ClickDelay)
             {
-                setMovement();
+                MouseClickedTime = Time.time;
+                Clicks = 0;
+            }
+
+            
+
+
+
+
+
+
+
+
+
+        }
+        else if (SystemInfo.deviceType == DeviceType.Handheld)
+        {
+
+            posToMove = Input.GetTouch(0).position;
+            posToMove.z = 0;
+
+            if (Input.touchCount % 2 != 0)
+            {
+
                 touchTime = Time.time;
 
+
             }
-            else if(Input.GetTouch(0).tapCount % 2 ==0 && (Time.time - touchTime) < 0.25f)
+            isEnemyClicked(posToMove);
+            if (HowToAttack.ClickedEnemy == true)
             {
-                animator.SetBool("Dash", true);
-                isDashed = true;
                 isMoved = false;
+
             }
 
-            else if(Input.GetTouch(0).phase==TouchPhase.Ended)
+
+            if ((Time.time - touchTime) < ClickDelay)
             {
-                if ((Time.time - touchTime) > 0.25f && Input.GetTouch(0).tapCount % 2 != 0)
+
+                if (Input.touchCount % 2 == 0)
                 {
-                    animator.SetBool("Walking", true);
-                    touchTime = 0;
-                    isMoved = true;
+                    if (HowToAttack.ClickedEnemy)
+                    {
+                        HowToAttack.attack(SecondsToAttack, transform.position, Camera.main.ScreenToWorldPoint(posToMove), 0);
+                    }
+                    else
+                    {
+                        isMoved = false;
+                    }
+
 
                 }
 
+            }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            if (this.gameObject.GetComponentInChildren<ExternMechanicsPlayer>().death == true)
+            {
+                animator.SetBool("Death", true);
+                /* if (animator.GetCurrentAnimatorStateInfo(0).IsTag("DeathTag"))
+                     UnityEditor.EditorApplication.isPlaying = false;*/
 
             }
 
 
 
-        }
 
 
-
-            
-
-
-
-            
-
-
-        if (this.gameObject.GetComponentInChildren<ExternMechanicsPlayer>().death == true)
-        {
-            animator.SetBool("Death", true);
-           /* if (animator.GetCurrentAnimatorStateInfo(0).IsTag("DeathTag"))
-                UnityEditor.EditorApplication.isPlaying = false;*/
 
         }
-
-        
-            
-
-        
-
     }
 
 
 
-    void setMovement()
+    void setMovement(Vector3 positionStart)
     {
-        movement.positionToMove = Input.mousePosition;
+        movement.positionToMove = positionStart;
         movement.screenPos = Camera.main.ScreenToWorldPoint(new Vector3(movement.positionToMove.x, movement.positionToMove.y, 0));
         movement.direction = movement.screenPos - transform.position;
     }
@@ -169,9 +245,21 @@ public class AnimatorPlayerScript: MonoBehaviour
         SecondsToAttack = Time.time;
         isMoved = false;
         isDashed = false;
-        animator.SetBool("Dash", false);
     }
 
+    public void isEnemyClicked(Vector3 pos)
+    {
+        Ray ray = Camera.main.ScreenPointToRay(pos);
+        RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
+
+        if (hit != false && hit.collider.tag=="Enemy")
+        {
+            if (hit.collider.tag == "Enemy")
+                HowToAttack.ClickedEnemy = true;
+        }   
+         else
+           HowToAttack.ClickedEnemy = false;
+    }
     public void WhereToLook(Vector3 screenPos)
     {
 
@@ -239,4 +327,5 @@ public class AnimatorPlayerScript: MonoBehaviour
         */
 
     }
+    
 }
