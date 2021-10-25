@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyGenerator : MonoBehaviour
 {
+    //TODO: Hacer que DungeonGenerator pueda llamar a este objeto cuando quiera
+
     private Dictionary<int, List<Enemy>> setFacil = new Dictionary<int, List<Enemy>>();
     private int numSetsFacil = 5;
     [SerializeField] private Enemy enemy0;
@@ -26,8 +28,28 @@ public class EnemyGenerator : MonoBehaviour
     private void Start() 
     {
         CreacionSets();
-        spawns.AddRange(FindObjectOfType<RoomBehaviour>().SpawnPoints);
-        SpawnEnemies("facil", spawns);
+        var rooms = FindObjectsOfType<RoomBehaviour>();
+
+        foreach (var room in rooms)
+        {
+            if(room.roomInfo.roomType == RoomInfo.RoomType.Enemies)
+            {
+                var spawnPoints = room.SpawnPoints;
+                spawns.AddRange(spawnPoints);
+                SpawnEnemies("facil", spawns);
+                spawns.Clear();
+            }
+        }
+
+        /**
+        var oneroom = FindObjectOfType<RoomBehaviour>();
+        if (oneroom != null)
+        {
+            var spawnPoints = oneroom.SpawnPoints;
+            spawns.AddRange(spawnPoints);
+            SpawnEnemies("facil", spawns);
+        }
+        //*/
     }
 
     //Creacion de los diferentes set de enemigos
@@ -87,9 +109,12 @@ public class EnemyGenerator : MonoBehaviour
         {
             case "facil":
                 int random = Random.Range(0, numSetsFacil);
-                List<Enemy> setRandom;
-                setFacil.TryGetValue(random, out setRandom);
-                
+                List<Enemy> setRandom, setToCopy;
+                setFacil.TryGetValue(random, out setToCopy);
+
+                setRandom = new List<Enemy>();
+                setRandom.AddRange(setToCopy);
+
                 do
                 {
                     Enemy temp = setRandom[0];
