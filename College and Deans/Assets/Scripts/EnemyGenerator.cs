@@ -32,7 +32,7 @@ public class EnemyGenerator : MonoBehaviour
 
         foreach (var room in rooms)
         {
-            if(room.roomType == RoomBehaviour.RoomType.Enemies)
+            if(room.roomInfo.roomType == RoomInfo.RoomType.Enemies)
             {
                 var spawnPoints = room.SpawnPoints;
                 spawns.AddRange(spawnPoints);

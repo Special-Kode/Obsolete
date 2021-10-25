@@ -21,12 +21,19 @@ public class DungeonGeneratorManager : MonoBehaviour
 
     public Vector2 MoveAmount = new Vector2(22, 22); //Distance between rooms
 
-    public GameObject Room; //Room prefab
+    //Room prefabs
+    public GameObject BL_Room;
+    public GameObject RB_Room;
+    public GameObject RL_Room;
+    public GameObject TB_Room;
+    public GameObject TL_Room;
+    public GameObject TR_Room;
+    public GameObject TRBL_Room;
     //public GameObject[] RoomList; //List of rooms for further use
 
     public Vector2 currentPos = Vector2.zero;
 
-    [SerializeField] private List<GameObject> roomList;
+    [SerializeField] private List<RoomInfo> roomInfoList; //TODO save useful room info for rearrangement
     [SerializeField] private List<Vector2> positions;
 
     private void Awake()
@@ -45,7 +52,7 @@ public class DungeonGeneratorManager : MonoBehaviour
     void Start()
     {
         positions = new List<Vector2>();
-        roomList = new List<GameObject>();
+        roomInfoList = new List<RoomInfo>();
         GenerateLevel();
     }
 
@@ -79,35 +86,20 @@ public class DungeonGeneratorManager : MonoBehaviour
 
             if (!positions.Contains(currentPos))
             {
-                var room = Instantiate(Room, currentPos, Quaternion.identity);
+                var roomInfo = new RoomInfo();
                 if (i == 0)
                 {
-                    room.GetComponent<RoomBehaviour>().roomType = RoomBehaviour.RoomType.Spawn;
-                    foreach (var wall in room.GetComponentsInChildren<SpriteRenderer>())
-                    {
-                        wall.color = Color.cyan;
-                    }
-                    foreach (var wall in room.GetComponentsInChildren<Tilemap>())
-                    {
-                        wall.color = Color.cyan;
-                    }
+                    roomInfo.roomType = RoomInfo.RoomType.Spawn;
                 }
                 else if (i == num - 1)
                 {
-                    room.GetComponent<RoomBehaviour>().roomType = RoomBehaviour.RoomType.Boss;
-                    foreach (var wall in room.GetComponentsInChildren<SpriteRenderer>())
-                    {
-                        wall.color = Color.red;
-                    }
-                    foreach (var wall in room.GetComponentsInChildren<Tilemap>())
-                    {
-                        wall.color = Color.red;
-                    }
+                    roomInfo.roomType = RoomInfo.RoomType.Boss;
                 }
                 else
-                    SetRandomRoom(room);
+                    SetRandomRoom(roomInfo);
 
-                roomList.Add(room);
+                roomInfo.position = currentPos;
+                roomInfoList.Add(roomInfo);
                 positions.Add(currentPos);
 
                 i++;
@@ -131,44 +123,67 @@ public class DungeonGeneratorManager : MonoBehaviour
         }
     }
 
-    void SetRandomRoom(GameObject room)
+    void SetRandomRoom(RoomInfo roomInfo)
     {
-        int rand = UnityEngine.Random.Range(0, System.Enum.GetValues(typeof(RoomBehaviour.RoomType)).Length - 2);
+        int rand = UnityEngine.Random.Range(0, System.Enum.GetValues(typeof(RoomInfo.RoomType)).Length - 2);
         switch (rand)
         {
             case 0:
-                room.GetComponent<RoomBehaviour>().roomType = RoomBehaviour.RoomType.Enemies;
+                roomInfo.roomType = RoomInfo.RoomType.Enemies;
                 break;
             case 1:
-                room.GetComponent<RoomBehaviour>().roomType = RoomBehaviour.RoomType.Cafe;
-                foreach (var wall in room.GetComponentsInChildren<SpriteRenderer>())
-                {
-                    wall.color = Color.green;
-                }
-                foreach (var wall in room.GetComponentsInChildren<Tilemap>())
-                {
-                    wall.color = Color.green;
-                }
+                roomInfo.roomType = RoomInfo.RoomType.Cafe;
                 break;
             case 2:
-                room.GetComponent<RoomBehaviour>().roomType = RoomBehaviour.RoomType.Loot;
-                foreach (var wall in room.GetComponentsInChildren<SpriteRenderer>())
-                {
-                    wall.color = Color.yellow;
-                }
-                foreach (var wall in room.GetComponentsInChildren<Tilemap>())
-                {
-                    wall.color = Color.yellow;
-                }
+                roomInfo.roomType = RoomInfo.RoomType.Loot;
                 break;
         }
     }
 
     void RearrangeLevel()
     {
-        foreach(var room in roomList)
+        foreach(var roomInfo in roomInfoList)
         {
-            Debug.Log(room.GetComponent<RoomBehaviour>().roomType);
+            Debug.Log(roomInfo.roomType);
+            roomInfo.CheckAdjacentRooms(positions, MoveAmount);
+            GameObject room;
+
+            if (roomInfo.adjacentRooms == (RoomInfo.AdjacentRooms.South | RoomInfo.AdjacentRooms.West))
+            {
+                room = Instantiate(BL_Room, roomInfo.position, Quaternion.identity);
+            }
+            else if (roomInfo.adjacentRooms == (RoomInfo.AdjacentRooms.East | RoomInfo.AdjacentRooms.South))
+            {
+                room = Instantiate(RB_Room, roomInfo.position, Quaternion.identity);
+            }
+            else if (roomInfo.adjacentRooms == (RoomInfo.AdjacentRooms.East | RoomInfo.AdjacentRooms.West))
+            {
+                room = Instantiate(RL_Room, roomInfo.position, Quaternion.identity);
+            }
+            else if (roomInfo.adjacentRooms == (RoomInfo.AdjacentRooms.North | RoomInfo.AdjacentRooms.South))
+            {
+                room = Instantiate(TB_Room, roomInfo.position, Quaternion.identity);
+            }
+            else if (roomInfo.adjacentRooms == (RoomInfo.AdjacentRooms.North | RoomInfo.AdjacentRooms.West))
+            {
+                room = Instantiate(TL_Room, roomInfo.position, Quaternion.identity);
+            }
+            else if (roomInfo.adjacentRooms == (RoomInfo.AdjacentRooms.North | RoomInfo.AdjacentRooms.East))
+            {
+                room = Instantiate(TR_Room, roomInfo.position, Quaternion.identity);
+            }
+            else 
+            {
+                room = Instantiate(TRBL_Room, roomInfo.position, Quaternion.identity);
+            }
+
+
+            //TODO edit all prefabs with a RoomBehaviour
+            if (room.GetComponent<RoomBehaviour>() != null)
+            {
+                room.GetComponent<RoomBehaviour>().roomInfo = roomInfo;
+            }
+            //room.GetComponent<RoomBehaviour>().roomInfo = roomInfo;
         }
     }
 }

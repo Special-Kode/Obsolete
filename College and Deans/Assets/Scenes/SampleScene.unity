@@ -939,10 +939,17 @@ MonoBehaviour:
   FixedValue: 8
   RandomLowerBound: 5
   RandomUpperBound: 10
-  MoveAmount: 22
-  Room: {fileID: 6380028362739767963, guid: 85c902a59242c3e40be87998a3fd1e8a, type: 3}
+  MoveAmount: {x: 22, y: 22}
+  BL_Room: {fileID: 9134656886654749445, guid: b6be209284c3df147a5ac1f64852478d, type: 3}
+  RB_Room: {fileID: 2656830672598404881, guid: 64d293081ed21e24f93fb02cd2ce142e, type: 3}
+  RL_Room: {fileID: 5548939766720987254, guid: efcef939797215a428e5b4ea99ac3f84, type: 3}
+  TB_Room: {fileID: 1343550643377438827, guid: fe0002cbe147e634a9113da9d340db61, type: 3}
+  TL_Room: {fileID: 3101014806226431107, guid: 3e98042d255835a4481a8964f784d3bb, type: 3}
+  TR_Room: {fileID: 5802476671422910626, guid: c08c7b11a2069bc4296fd7b7bc535d1a, type: 3}
+  TRBL_Room: {fileID: 6380028362739767963, guid: 85c902a59242c3e40be87998a3fd1e8a, type: 3}
   currentPos: {x: 0, y: 0}
   roomList: []
+  roomInfoList: []
   positions: []
 --- !u!4 &1557327681
 Transform:
