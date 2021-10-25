@@ -120,6 +120,9 @@ public class EnemyGenerator : MonoBehaviour
                     Enemy temp = setRandom[0];
                     Transform spawnPosition = spawns[Random.Range(0, spawns.Count)];
                     Instantiate(temp, spawnPosition);
+                    temp.gameObject.tag = "Enemy";
+                    temp.gameObject.AddComponent<Rigidbody2D>();
+                    temp.gameObject.AddComponent<BoxCollider2D>();
                     spawns.Remove(spawnPosition);
                     setRandom.Remove(temp);
                 } while (setRandom.Count != 0);

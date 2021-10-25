@@ -615,6 +615,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a54b11c663efb74bb0aa8fe4a6d2764, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idImage: 0
   movementState: 
   Up: 0
   Right: 0
@@ -625,6 +626,8 @@ MonoBehaviour:
   direction: {x: 0, y: 0, z: 0}
   screenPos: {x: 0, y: 0, z: 0}
   newPosition: {x: 0, y: 0, z: 0}
+  oldPosition: {x: 0, y: 0, z: 0}
+  canPass: 0
 --- !u!212 &622899572
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -707,6 +710,9 @@ MonoBehaviour:
   isMoved: 0
   isDashed: 0
   HowToAttack: {fileID: 0}
+  enter: 0
+  PosInitDash: {x: 0, y: 0, z: 0}
+  posFinalDash: {x: 0, y: 0, z: 0}
 --- !u!50 &622899575
 Rigidbody2D:
   serializedVersion: 4
@@ -718,12 +724,12 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
+  m_UseAutoMass: 1
+  m_Mass: 1.6384
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 9f37e25e989dcf8458bd2284a37196d8, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -893,7 +899,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 835358392}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -1085,33 +1091,43 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 0357a35ff80e1144ab99a61f7812fde1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6314a178e0011f042ab1e432efe1052a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.56, y: 2.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!54 &1976232287
-Rigidbody:
+--- !u!61 &1976232287
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1976232284}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.56, y: 2.56}
+    newSize: {x: 2.56, y: 2.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Size: {x: 2.56, y: 2.56}
+  m_EdgeRadius: 0
 --- !u!114 &1976232288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1121,22 +1137,31 @@ MonoBehaviour:
   m_GameObject: {fileID: 1976232284}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fccc52a4ab278374da4bc6ee502f5de1, type: 3}
+  m_Script: {fileID: 11500000, guid: 87eae25c163d67148a75825bc0e50d20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!65 &1976232289
-BoxCollider:
+  collide: 0
+--- !u!50 &1976232289
+Rigidbody2D:
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1976232284}
+  m_BodyType: 0
+  m_Simulated: 0
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 0.99999994, z: 0}
-  m_Center: {x: 0.0000009536743, y: 0.00000011920929, z: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &2144434230
 GameObject:
   m_ObjectHideFlags: 0
@@ -1150,12 +1175,12 @@ GameObject:
   - component: {fileID: 2144434234}
   - component: {fileID: 2144434233}
   m_Layer: 0
-  m_Name: Enemie
-  m_TagString: Enemie
+  m_Name: Enemy
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &2144434231
 SpriteRenderer:
   m_ObjectHideFlags: 0
