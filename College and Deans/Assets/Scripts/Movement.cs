@@ -11,13 +11,14 @@ public class Movement : MonoBehaviour
     private GameObject player;
     private AnimatorPlayerScript playerScript;
     public Vector3 positionToMove,direction,screenPos;
-    float speed;
-    float distanceDashed;
-    Vector3 InitialPos;
+    public float speed;
+    public float distanceDashed;
+    public Vector3 InitialPos;
    public Vector3 newPosition;
     public Vector3 oldPosition;
     public bool canPass;
     private int mask;
+    public Vector2 velocity;
     // Se procede a cambiar de posición al personaje dependiendo de si se mueve o procede a realizar un dash.
     void Start()
     {
@@ -59,16 +60,19 @@ public class Movement : MonoBehaviour
 
     private void PlayerMoved()
     {
-        speed = 5f;
-        screenPos.z = 0;
-        newPosition = transform.position;
-        newPosition = Vector2.MoveTowards(new Vector2(newPosition.x, newPosition.y), new Vector2(screenPos.x, screenPos.y), speed * Time.deltaTime);
-        Collider2D[] collider = Physics2D.OverlapBoxAll(new Vector2(newPosition.x, newPosition.y), new Vector2(2.56f/2f, 2.56f/2f), 0,mask);
-        if (collider.Length < 1 && Vector3.Distance(transform.position, screenPos) > 0.05f)
+       
+            speed = 2000f;
+            screenPos.z = 0;
+            Vector3 dir = screenPos - transform.position;
+            velocity = dir.normalized * speed * Time.deltaTime;
+            this.GetComponent<Rigidbody2D>().velocity = velocity;
+               
+      //  Collider2D[] collider = Physics2D.OverlapBoxAll(new Vector2(newPosition.x, newPosition.y), new Vector2(2.56f/2f, 2.56f/2f), 0,mask);
+        /*if (collider.Length < 1 && Vector3.Distance(transform.position, screenPos) > 0.05f)
         {
            
             transform.position = newPosition;
-        }
+        }*/
 
             
             
@@ -115,37 +119,17 @@ public class Movement : MonoBehaviour
 
        */
 
+
             
     }
     private void PlayerDashed()
     {
-
-        Vector3  direction;
-        if (InitialPos == Vector3.zero)
-        {
-            InitialPos = transform.position;
-        }
-           
-        distanceDashed = Vector3.Distance(player.transform.position, InitialPos);
-        speed = 10f;
-        direction = (playerScript.posFinalDash - playerScript.PosInitDash);
-        newPosition = Vector2.MoveTowards(new Vector2(transform.position.x, transform.position.y), 
-            new Vector2(InitialPos.x+(direction.x),InitialPos.y+ direction.y), speed * Time.deltaTime);
-
-        oldPosition = player.transform.position;
-        player.transform.position = newPosition;
+            speed = 3000f;
+            direction = (playerScript.posFinalDash - playerScript.PosInitDash);
+            velocity = direction.normalized * speed * Time.deltaTime;
+            this.GetComponent<Rigidbody2D>().velocity = velocity;
         
-        Collider2D[] collider = Physics2D.OverlapBoxAll(new Vector2(transform.position.x, transform.position.y), new Vector2(2.56f / 2f, 2.56f / 2f), 0,mask);
 
-
-        if (distanceDashed > 2 || collider.Length >= 1)
-        {
-            transform.position = oldPosition;
-            playerScript.isDashed = false;
-            distanceDashed = 0;
-            InitialPos = Vector3.zero;
-            playerScript.enter = false;
-        }
 
 
     }
