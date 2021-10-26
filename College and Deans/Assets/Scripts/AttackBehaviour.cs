@@ -2,22 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
- public class AttackBehaviour :ScriptableObject
+ public class AttackBehaviour :MonoBehaviour
 {
     //Aquí están los distintos comportamientos de ataque dependiendo de si el arma es una arma blanca o una arma de fuego.
     private Weapon weapon;
     private AnimatorPlayerScript animatorPlayer;
-    private GameObject bullet;
+   [SerializeField] private GameObject bullet;
     public bool bulletShooted;
     public bool ClickedEnemy;
     float speedBullet;
     Vector3 EnemyPos;
-    public void init(AnimatorPlayerScript animator,GameObject bullet)
+    public void Start()
     {
-        animatorPlayer = animator;
+        animatorPlayer = this.GetComponent<AnimatorPlayerScript>();
         bulletShooted = false;
-        speedBullet = 15f;
-        this.bullet = bullet;
+        speedBullet = 200000f;
         ClickedEnemy = false;
        
     }
@@ -30,7 +29,7 @@ using UnityEngine;
         return weapon;
     }
 
-    public void attack(float seconds,Vector3 position,Vector3 EnemyPos,int device)
+    public void attack(float seconds,Vector3 position,Vector3 MousePos,int device)
     {
         this.EnemyPos = EnemyPos;
         if (getWeapon().getType() == "Sword")
@@ -51,7 +50,7 @@ using UnityEngine;
            bulletShooted = true;
            //animatorPlayer.WhereToLook(Input.mousePosition);
            animatorPlayer.SetAttack();
-           shootBullet(position);
+           shootBullet(position,MousePos);
                     
            
         }
@@ -60,23 +59,17 @@ using UnityEngine;
 
 
     }
-    public void moveBullet()
+  
+
+    public void shootBullet(Vector3 playerPos,Vector3 mousePos)
     {
-        if (bulletShooted == true)
-        {
-
-            bullet.transform.position = Vector2.MoveTowards(new Vector2(bullet.transform.position.x, bullet.transform.position.y),
-                new Vector2(EnemyPos.x, EnemyPos.y), speedBullet * Time.deltaTime);
-
-
-        }
-    }
-
-    public void shootBullet(Vector3 playerPos)
-    {
-
-        bullet.transform.position = playerPos;
-
+        GameObject tempBullet = Instantiate(bullet, this.transform.position, Quaternion.identity);
+        tempBullet.transform.position = playerPos;
+        Vector2 dir = new Vector2(mousePos.x - playerPos.x, mousePos.y - playerPos.y).normalized;
+        tempBullet.GetComponent<Rigidbody2D>().AddForce(dir * speedBullet * Time.deltaTime);
+        dir = (Camera.main.ScreenToWorldPoint(mousePos) - playerPos).normalized;
+        float rot_z = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        tempBullet.transform.rotation = Quaternion.Euler(0f, 0f, rot_z);
     }
 }
 
