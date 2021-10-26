@@ -27,8 +27,7 @@ public class AnimatorPlayerScript: MonoBehaviour
         animator = GetComponent<Animator>();
         movement = this.GetComponent<Movement>();
         bullet = GameObject.FindGameObjectWithTag("Bullet");
-        HowToAttack = ScriptableObject.CreateInstance<AttackBehaviour>();
-        HowToAttack.init(this,bullet);
+        HowToAttack = this.GetComponent<AttackBehaviour>();
         Weapon gun = new Weapon("Lapiz", 20, "Gun");
         HowToAttack.SetWeapon(gun);
         isMoved = false;
@@ -50,8 +49,7 @@ public class AnimatorPlayerScript: MonoBehaviour
             animator.SetBool("Walking", true);
         if (SystemInfo.deviceType == DeviceType.Desktop)
         {
-            HowToAttack.moveBullet();
-
+           
             if (Input.GetMouseButtonDown(0))
             {
 
@@ -97,7 +95,7 @@ public class AnimatorPlayerScript: MonoBehaviour
 
                 if (Vector3.Distance(posFinalDash, PosInitDash) > 2 && isDashed == false)
                 {
-                    
+                    movement.InitialPos = transform.position;
                     isDashed = true;
                     isMoved = false;
                     MouseClickedTime = 0;
@@ -106,8 +104,7 @@ public class AnimatorPlayerScript: MonoBehaviour
                 }
 
 
-                
-
+               
 
             }
 
@@ -129,10 +126,12 @@ public class AnimatorPlayerScript: MonoBehaviour
                 Clicks = 0;
 
             }
+
             if (Clicks % 2 != 0)
             {
                 if ((Time.time - MouseClickedTime) > ClickDelay && !HowToAttack.ClickedEnemy && isDashed == false && enter==true)
                 {
+
                     isMoved = true;
                     setMovement(posToMove);
                     enter = false;
@@ -146,11 +145,22 @@ public class AnimatorPlayerScript: MonoBehaviour
                 Clicks = 0;
             }
 
-            
 
 
 
 
+            if (Vector3.Distance(movement.screenPos, transform.position) <= 0.1f && this.GetComponent<Rigidbody2D>().velocity != Vector2.zero && isMoved ==true)
+            {
+                this.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                isMoved = false;
+            }
+
+            if (Vector3.Distance(transform.position, movement.InitialPos) > 2f && this.GetComponent<Rigidbody2D>().velocity!=Vector2.zero && isDashed==true)
+            {
+                this.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                movement.distanceDashed = 0;
+                isDashed = false;
+            }
 
 
 
@@ -251,14 +261,17 @@ public class AnimatorPlayerScript: MonoBehaviour
     {
         Ray ray = Camera.main.ScreenPointToRay(pos);
         RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
-
-        if (hit != false && hit.collider.tag=="Enemy")
+        
+        if (hit.collider != null)
         {
             if (hit.collider.tag == "Enemy")
                 HowToAttack.ClickedEnemy = true;
-        }   
-         else
-           HowToAttack.ClickedEnemy = false;
+            else
+                HowToAttack.ClickedEnemy = false;
+        }
+        else
+            HowToAttack.ClickedEnemy = false;
+
     }
     public void WhereToLook(Vector3 screenPos)
     {
@@ -269,7 +282,7 @@ public class AnimatorPlayerScript: MonoBehaviour
         {
             angle += 360;
         }
-            
+            //derecha
         if (angle <= 22.5f)
         {
             if (animator.GetBool("Walking"))
@@ -282,6 +295,8 @@ public class AnimatorPlayerScript: MonoBehaviour
            
         // else if(angle <= 3/8*Mathf.PI && angle >= -Mathf.PI / 8)
 
+
+        //arriba
         else if(angle<= 112.5f && angle > 67.5f)
         {
             if (animator.GetBool("Walking"))
@@ -295,6 +310,9 @@ public class AnimatorPlayerScript: MonoBehaviour
 
         //else if (angle <= 7 / 8 * Mathf.PI && angle > 5 / 8 * Mathf.PI)
 
+
+
+        //izquierda
         else if (angle <= 202.5f && angle >= 157.5f)
         {
             if (animator.GetBool("Walking"))
@@ -307,6 +325,8 @@ public class AnimatorPlayerScript: MonoBehaviour
            
                 //else if (angle <= 1 + (3 / 8) * Mathf.PI && angle > 1 + (1 / 8) * Mathf.PI)
 
+
+        //abajo
         else if (angle <= 292.5f && angle > 247.5f)
         {
             if (animator.GetBool("Walking"))
